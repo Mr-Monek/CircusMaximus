@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  background: #0B0B0D;
+  color: #E6E0D4;
+  font-family: Georgia, serif;
+}
+
+/* ancient dusty background vibe */
+.roman-bg {
+  background:
+    radial-gradient(circle at center, rgba(176, 141, 87, 0.12), transparent 60%),
+    linear-gradient(to bottom, #0B0B0D, #151518);
+}
+
+/* clickable zone highlight */
+.zone {
+  transition: all 0.3s ease;
+}
+
+.zone:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
