@@ -61,7 +61,7 @@ const HOTSPOTS = [
 ]
 
 // ─── ZOOM MATH ────────────────────────────────────────────────────────────────
-function getZoomTransform(hs, scale = 1.8) {
+function getZoomTransform(hs: { fx: number; fy: number } | null, scale = 1.8) {
   if (!hs) return 'scale(1) translate(0%, 0%)'
   const tx = (0.5 - hs.fx) * 100
   const ty = (0.5 - hs.fy) * 100
