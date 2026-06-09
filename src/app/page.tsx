@@ -1194,7 +1194,7 @@ function AboutSection() {
 
             <div style={{ height: '1px', background: 'linear-gradient(to right, var(--border), var(--border-mid), var(--border))', marginBottom: '18px' }}/>
 
-            <p style={{ fontSize: '12.5px', color: '#7A6040', lineHeight: '1.88', letterSpacing: '0.02em' }}>
+            <p style={{ fontSize: '12.5px', color: '#A6834F', lineHeight: '1.88', letterSpacing: '0.02em' }}>
               {b.bio}
             </p>
           </div>
