@@ -70,12 +70,12 @@ function getZoomTransform(hs: { fx: number; fy: number } | null, scale = 1.8) {
 
 // ─── PAGE COMPONENT ───────────────────────────────────────────────────────────
 export default function CircusMaximusPage() {
-  const [activeHotspot, setActiveHotspot] = useState(null)
+  const [activeHotspot, setActiveHotspot] = useState<typeof HOTSPOTS[0] | null>(null)
   const [zoomed, setZoomed]               = useState(false)
   const [panelVisible, setPanelVisible]   = useState(false)
   const [mode, setMode]                   = useState('fancy')
 
-  const handleHotspot = (hs) => {
+  const handleHotspot = (hs: typeof HOTSPOTS[0]) => {
     if (zoomed) return
     setActiveHotspot(hs)
     setZoomed(true)
@@ -1069,7 +1069,7 @@ function SimpleView() {
 
 
 // ─── INFO PANEL ───────────────────────────────────────────────────────────────
-function InfoPanel({ hotspot, onClose }) {
+function InfoPanel({ hotspot, onClose }: { hotspot: typeof HOTSPOTS[0] | null, onClose: () => void }) {
   if (!hotspot) return null
 
   return (
